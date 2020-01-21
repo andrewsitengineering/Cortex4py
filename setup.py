@@ -11,7 +11,7 @@ except ImportError:
 
 setup(
     name='cortex4py',
-    version='2.1.0',
+    version='2.1.1',
     description='Python API client for Cortex.',
     long_description=read_md('README.md'),
     author='TheHive-Project',
