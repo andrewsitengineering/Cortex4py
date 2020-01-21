@@ -46,6 +46,8 @@ class Api(object):
                 raise AuthenticationError("Authentication error") from exception
             elif exception.response.status_code == 403:
                 raise AuthorizationError("Authorization error") from exception
+            elif exception.response.status_code == 429:
+                raise TooManyRequestsError("Too Many Requests") from exception
             else:
                 raise InvalidInputError("Invalid input exception") from exception
         elif isinstance(exception, requests.exceptions.ConnectionError):
