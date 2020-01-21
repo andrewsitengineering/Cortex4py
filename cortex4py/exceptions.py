@@ -28,3 +28,7 @@ class ServerError(CortexException):
 
 class CortexError(CortexException):
     pass
+
+
+class TooManyRequestsError(CortexException):
+    pass
